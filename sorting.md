@@ -334,13 +334,59 @@ end
 
 ---
 
-# Salesperson
+## Salesperson
+
+![fit](1955_Mercury_Montclair_Convertible.jpg)
 
 ---
 
-![fit](example_tsp.gif)
+![fit](Sicily-cities-map-bjs.jpg)
+
+^ What is the best route for the salesperson to visit each city only once, returning
+  to the starting city at the end?
 
 ---
 
+# [fit] Could you find it by hand?
 
 ---
+
+# [fit] Probably, for a small number of cities!
+
+---
+
+![fit](tsp_iteration.gif)
+
+^ Upwards of 400,000 iterations for about 50 cities
+
+---
+
+> The TSP has several applications even in its purest formulation, such as planning, logistics, and the manufacture of microchips. Slightly modified, it appears as a sub-problem in many areas, such as DNA sequencing.
+
+---
+
+# [fit] Algorithms Matter
+
+---
+
+# [fit] Understanding Complexity Matters
+
+---
+
+## Understanding How to Break Problems Down Effectively Matters
+
+---
+
+# Being a Developer
+
+1. Understanding the problem
+2. Breaking it down into small steps
+3. Appreciate the complexity
+
+---
+
+# [fit] Thank You
+
+---
+
+# [fit] Questions?
