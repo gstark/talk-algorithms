@@ -365,6 +365,12 @@ end
 
 ---
 
+# [fit] For More info
+
+# [fit] http://bit.ly/XUXLXWX
+
+---
+
 # [fit] Algorithms Matter
 
 ---
