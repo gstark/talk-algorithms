@@ -8,6 +8,12 @@
 
 ---
 
+![fit](TIIY-Logo-500px-white.png)
+
+^ Back End Instructor at The Iron Yard
+
+---
+
 ![fit](riley.png)
 
 ^ I have promised my girlfriend that I would include a photo of our dog Riley in each presentation I do.
@@ -16,9 +22,15 @@
 
 ---
 
+# telephony
+
+![fit](switchboard-operator.jpg)
+
+---
+
 # space
 
-![fit](http://www.inspace21.com/Backbone/BMRST.png)
+![fit](BMRST.png)
 
 ^ Worked in the aerospace industry on command-destruct systems for rocket launches
 
@@ -26,42 +38,33 @@
 
 # signage
 
-![fit](http://www.digitalavmagazine.com/wp-content/uploads/2012/02/Real-Digital-Media-Rave-Cinemas-Digital-1.jpg)
+![fit](Real-Digital-Media-Rave-Cinemas-Digital-1.jpg)
 
 ^ Built digital signage systems using Rails, Content Distribution Systems, and a custom Linux OS for embedded devices
 
 ---
 
-# Sorting
-
-^ Today we are going to talk about sorting of data
-
----
-
-# Why Sorting?
-- Present lists in order
-- Makes searching easier
-- Merging/detecting sequences
-
----
-
 # Algorithms
 
-^ But before we can talk about how sorting works we need to discuss the concept of Algorithms
-
-^ So like any good presentation lets give the boring definition
+^ Like any good presentation lets give the boring definition
 
 ---
 
 > Self-contained step-by-step set of operations to be performed.
 
+^ And another definition...
+
 ---
 
 > Algorithms perform calculation, data processing, and/or automated reasoning tasks.
 
+^ And another definition...
+
 ---
 
 > An algorithm is an effective method that can be expressed within a finite amount of space and time and in a well-defined formal language for calculating a function.
+
+^ And another definition...
 
 ---
 
@@ -158,21 +161,112 @@ return A
 
 # [fit] "Make a PB&J Sandwich"
 
-^ Try this out on the whiteboard
+^ Give a couple of example tries
 
 ^ Show that nearly every step we think is precise, could be more precise
+
+^ Suggest people try at home
 
 ---
 
 # [fit] This is the :key: to mastering programming
 
-^ Get good at breaking down problems
+---
+
+![fit](break-it-down.jpg)
+
+^ When starting out with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
 
 ---
 
-# [fit] Breaking down problems to fine detail
+    1. Read the problem completely twice.
+    2. Solve the problem manually with 3 sets of sample data.
+    3. Optimize the manual steps.
+    4. Write the manual steps as comments or pseudo-code.
+    5. Replace the comments or pseudo-code with real code.
+    6. Optimize the real code.
 
-^ When starting out with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
+^ https://simpleprogrammer.com/2011/01/08/solving-problems-breaking-it-down/
+
+---
+
+# Read the problem completely twice.
+
+    - Most important!
+    - Can you explain it (simply) to someone else?
+
+---
+
+# Solve the problem manually
+
+    - Programming is automation
+    - Solve the problem manually
+    - Maybe even on pen and paper
+    - Or use physical objects
+    - Practice!
+
+---
+
+# Optimize the manual solution
+
+    - Can you remove steps?
+
+---
+
+# Write pseudo-code or comments
+
+    - Open an editor and write the manual steps in English
+
+---
+
+# Replace comments with real code
+
+    - Replace each individual steps with code
+
+---
+
+# Example
+
+-
+-
+-
+-
+
+## [fit] Reverse a string
+
+---
+
+    1. Write “Zebra” down.
+    2. Create a new empty word.
+    2. Start at the last letter in the word (the "a" from Zebra)
+    3. Append the current letter to the new word
+    4. If there is a previous letter,
+       make the previous letter the current
+       letter and start back at 3.
+
+---
+
+# Pseudo code
+
+    1. NewWord = ""
+    2. Loop backwards through word to reverse
+    3.   NewWord += CurrentLetter
+    4. Return NewWord
+
+---
+
+# Code (Ruby)
+
+```
+word = "Zebra"
+
+new_word = ""
+word.chars.reverse_each do |letter|
+  new_word += letter
+end
+
+new_word # => "arbeZ"
+```
 
 ---
 
@@ -201,6 +295,7 @@ return A
 ---
 
 ^ explain ... in range
+
 ^ explain each_cons
 
 ```ruby
@@ -221,76 +316,13 @@ end
 ```
 
 ---
+![inline autoplay mute loop](bubblesort.mp4)
 
-# [fit] For each element, find the place in the list
-# [fit] where it belongs and "insert" it there
-
----
-
-# Insertion Sort
-
-- Assume the first element is already sorted
-- Working backwards, if the previous element is smaller,
-   stop as we know where to place this element, otherwise swap the element and move left.
+- https://github.com/AIRTucha/SortVis
 
 ---
 
-^ Show how this works visually
-
-```ruby
-def insert_sort(array)
-  (1...array.length).each do |pos|
-    while pos > 0 && array[pos-1] > array[pos]
-       array[pos], array[pos-1] = array[pos - 1], array[pos]
-
-       pos -= 1
-    end
-  end
-end
-```
-
----
-
-# Quick Sort
-
-^ Widely used
-  Complex to understand
-  Generally one of the more efficient
-  Might not *always* be the best choice
-
----
-
-- Select a pivot point
-
-- Move all the elements *less* than the pivot before
-- All the elements *more* than the pivot will be after
-- *recursively* apply quicksort to both sides of the pivot
-
----
-
-```ruby
-def quicksort(array, low = 0, high = array.length - 1)
-  return unless low < high
-  pivot = array[high]
-  i = low
-  (low...high).each do |j|
-    if array[j] <= pivot
-      array[i], array[j] = array[j], array[i]
-      i += 1
-    end
-  end
-  array[i], array[high] = array[high], array[i]
-  quicksort(array, low, i - 1)
-  quicksort(array, i + 1, high)
-end
-```
-
----
-![fit](quicksort.mp4)
-
-^ https://github.com/AIRTucha/SortVis
-
----
+### A moment of zen
 
 ![fit](zen-garden.jpg)
 
@@ -302,13 +334,25 @@ end
 
 # [fit] Algorithm Complexity
 
+^ How do we know how "good" or algorithm is?
+
 ---
 
-- Measure of order of the number of operations required
+# Measure
+- the number of operations required => _time_
+- the amount of memory required     => _space_
+
+---
 
 > Best case
+-
+-
 > Worst case
+-
+-
 > Average case
+-
+-
 
 ^ Best case - if the data is perfect for *this* algorithm, how fast
   Worst case - if the data is terrible for *this* algorithm, how slow
@@ -409,11 +453,11 @@ end
 
 # Being a Developer
 
-1. Understanding the problem
-2. Breaking it down into small steps
-3. Break it into even smaller steps
-4. Translate this to code
-5. Appreciate the complexity
+    1. Understanding the problem
+    2. Break it down into small steps
+    3. Break it into even smaller steps
+    4. Translate this to code
+    5. Appreciate the complexity
 
 ---
 
