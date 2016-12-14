@@ -22,9 +22,19 @@
 
 ---
 
+# retail
+
+![fit](assets/checkout.jpg)
+
+^ Out of school I worked for a consulting company that reviewed, recommended, and installed systems for POS, inventory management, warehouse management, and financial control for retail
+
+---
+
 # telephony
 
 ![fit](assets/switchboard-operator.jpg)
+
+^ Have built software, and embedded systems, to manage remote PBXs (e.g. the large corporate phone systems)
 
 ---
 
