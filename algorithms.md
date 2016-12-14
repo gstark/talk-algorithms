@@ -1,6 +1,6 @@
 # [fit] Algorithms, not Al Gore's Rhythm
 
-![inline autoplay mute loop](algore.mp4)
+![inline autoplay mute loop](assets/algore.gif)
 
 ---
 
@@ -8,13 +8,13 @@
 
 ---
 
-![fit](TIIY-Logo-500px-white.png)
+![fit](assets/TIIY-Logo-500px-white.png)
 
 ^ Back End Instructor at The Iron Yard
 
 ---
 
-![fit](riley.png)
+![fit](assets/riley.png)
 
 ^ I have promised my girlfriend that I would include a photo of our dog Riley in each presentation I do.
 
@@ -24,13 +24,13 @@
 
 # telephony
 
-![fit](switchboard-operator.jpg)
+![fit](assets/switchboard-operator.jpg)
 
 ---
 
 # space
 
-![fit](BMRST.png)
+![fit](assets/BMRST.png)
 
 ^ Worked in the aerospace industry on command-destruct systems for rocket launches
 
@@ -38,7 +38,7 @@
 
 # signage
 
-![fit](Real-Digital-Media-Rave-Cinemas-Digital-1.jpg)
+![fit](assets/Real-Digital-Media-Rave-Cinemas-Digital-1.jpg)
 
 ^ Built digital signage systems using Rails, Content Distribution Systems, and a custom Linux OS for embedded devices
 
@@ -68,7 +68,7 @@
 
 ---
 
-![fit](mindblown.gif)
+![fit](assets/mindblown.gif)
 
 ^ WHAAAAAT?
 
@@ -82,7 +82,7 @@
 
 ---
 
-![fit](map.png)
+![fit](assets/map.png)
 
 ^ Giving specifc directions to someone on how to drive from place to place
 
@@ -92,7 +92,7 @@
 
 #### http://bit.ly/1tsqopI
 
-![inline fill](recipe.jpg)
+![inline fill](assets/recipe.jpg)
 
 ^ Followed, created, or modified a recipe for cooking
 
@@ -100,13 +100,13 @@
 
 #### http://bit.ly/1Pp7bZY
 
-![inline fill](ikea.jpg)
+![inline fill](assets/ikea.jpg)
 
 ^ "Place Tab A into Slot B"
 
 ---
 
-![fit](owl.jpg)
+![fit](assets/owl.jpg)
 
 ^ Draw two circles
 
@@ -122,7 +122,7 @@
 
 ---
 
-![fit](bisect.png)
+![fit](assets/bisect.png)
 
 ^ Formal construction for bisecting the angle
 
@@ -173,7 +173,7 @@ return A
 
 ---
 
-![fit](break-it-down.jpg)
+![fit](assets/break-it-down.jpg)
 
 ^ When starting out with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
 
@@ -280,7 +280,7 @@ new_word # => "arbeZ"
 
 # Bubble sort
 
-![fill](bubbles.jpg)
+![fill](assets/bubbles.jpg)
 
 ^ https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5B-8mahpK-hN6juM-r7AJpA-ajYWaD-6zd2fV-nhgRbE-86k6Pf-38z42x-indd8g-o92k4j-btkhTp-8as94X-gdM5mg-nuoPxX-8ibJQ1-h2paWu-rqZ7-2wtUmq-7LYqqC-7yGiBn-2VD8P9-bWUbbw-6dXEed-ayCXtz-9VZvt5-ah6cUm-7aNK5e-dM9tRD-bytmvQ-fdgM3t-fMGVce-oDBmtB-fpCiAy-9GxMTc-iALYdC-9gcyYE-e5xtKs-xYMme-5TBqfJ-etJxvL-9TRW6k-4ZPTPC-9JtZ4F-96g9Ms-anRjkS-cqPJ9b-aqFvbJ-85xV3n
 
@@ -316,7 +316,7 @@ end
 ```
 
 ---
-![inline autoplay mute loop](bubblesort.mp4)
+![inline autoplay mute loop](assets/bubblesort.mp4)
 
 - https://github.com/AIRTucha/SortVis
 
@@ -324,7 +324,7 @@ end
 
 ### A moment of zen
 
-![fit](zen-garden.jpg)
+![fit](assets/zen-garden.jpg)
 
 ^ https://www.flickr.com/photos/91604813@N03/8439070389/in/photolist-dRJrBB-s4K1VU-p6DwNY-dRQ271-csLT6L-s5HH9C-53sRLW-p6GeRy-edcCWC-nWCE27-nv6aQE-anoGck-anoFKK-7ius6w-sntwEE-nHEyJ7-anrLr1-ay5Dmf-eijpgL-eimZwd-eidF5v-ekmQMh-anrBX9-dRJrCg-anxCHQ-53oCGD-ay2W6B-54vk5W-anuNNk-anoDX8-anrKnG-dH8fwH-qanAxd-ay5DCW-8VRU3W-poMWLN-ekmnqN-fy8aDK-G78Jjz-anrJWw-anrKLb-anoYUR-5oUwi3-eidEGz-eijpkb-g4cW9M-ein3Yy-eidEQV-b6uVeB-a6v8Lx
 
@@ -371,7 +371,7 @@ end
 
 ---
 
-![fit](binary-and-linear-search-animations.gif)
+![fit](assets/binary-and-linear-search-animations.gif)
 
 ^ Binary search we half the amount of comparisons we need to do
   each time we make a decision. This is worst case log(n)
@@ -392,19 +392,19 @@ end
 
 ---
 
-![fit](complexity.jpg)
+![fit](assets/complexity.jpg)
 
 ---
 
 ## Salesperson
 
-![fit](1955_Mercury_Montclair_Convertible.jpg)
+![fit](assets/1955_Mercury_Montclair_Convertible.jpg)
 
 ^ Imagine you are a traveling salesperson.
 
 ---
 
-![fit](Sicily-cities-map-bjs.jpg)
+![fit](assets/Sicily-cities-map-bjs.jpg)
 
 ^ What is the best route for the salesperson to visit each city only once, returning
   to the starting city at the end?
@@ -419,7 +419,7 @@ end
 
 ---
 
-![fit](tsp_iteration.gif)
+![fit](assets/tsp_iteration.gif)
 
 ^ Upwards of 400,000 iterations for about 50 cities
 
