@@ -10,7 +10,7 @@
 
 ![fit](assets/TIIY-Logo-500px-white.png)
 
-^ Back End Instructor at The Iron Yard
+^ Instructor at The Iron Yard
 
 ---
 
@@ -94,7 +94,7 @@
 
 ![fit](assets/map.png)
 
-^ Giving specifc directions to someone on how to drive from place to place
+^ Giving specific directions to someone on how to drive from place to place
 
 ^ Going to come back to directions later.
 
@@ -140,7 +140,7 @@
 
 # Euclid's Algorithm for GCD
 
-```C
+```ruby
 while (A != B) {
 
  if (A > B)
@@ -153,15 +153,130 @@ while (A != B) {
 return A
 ```
 
-^ Try an example on a whiteboard:
-  GCD of (a) 210, (b) 45
-    A > B (210 > 45) => A = 210 - 45 => 165
-    A > B (165 > 45) => A = 165 - 45 => 120
-    A > B (120 > 45) => A = 120 - 45 => 75
-    A > B (75 > 45) => A = 75 - 45 => 30
-    else  (30 > 45) => B = 45 - 30 => 15
-    A > B (30 > 15) => A = 30 - 15 => 15
-    A == B (15 == 15) => 15
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 210, B = 45`
+
+---
+
+
+# Euclid's Algorithm for GCD
+
+`A = 210, B = 45`
+<br>
+`A > B (210 > 45)`
+<br>
+`A = 210 - 45`
+<br>
+`A = 165`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 165, B = 45`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 165, B = 45`
+<br>
+`A > B (165 > 45)`
+<br>
+`A = 165 - 45`
+<br>
+`A = 120`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 120, B = 45`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 120, B = 45`
+<br>
+`A > B (120 > 45)`
+<br>
+`A = 120 - 45`
+<br>
+`A = 75`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 75, B = 45`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 75, B = 45`
+<br>
+`A > B (75 > 45)`
+<br>
+`A = 75 - 45`
+<br>
+`A = 30`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 30, B = 45`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 30, B = 45`
+<br>
+`else ... since it isn't true that (30 > 45)`
+<br>
+`B = 45 - 30`
+<br>
+`B = 15`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 30, B = 15`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 30, B = 15`
+<br>
+`A > B (30 > 15)`
+<br>
+`A = 30 - 15`
+<br>
+`A = 15`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 15, B = 15`
+
+---
+
+# Euclid's Algorithm for GCD
+
+`A = 15, B = 15`
+<br>
+`done with *while* since A == B`
+<br>
+`GCD = 15`
 
 ---
 
@@ -242,18 +357,22 @@ return A
 -
 -
 
-## [fit] Reverse a string
+## [fit] Reverse a string (word)
+
+^ Our goal is to be able to reverse any string (word)
+^ How would we break this down into tiny steps
 
 ---
 
     1. Write “Zebra” down.
     2. Create a new empty word.
     2. Start at the last letter in the word (the "a" from Zebra)
-    3. Append the current letter to the new word
+    3. Put the current letter at the end of the new word
     4. If there is a previous letter,
-       make the previous letter the current
+       make the previous letter the current letter
        letter and start back at 3.
-
+    5. When there are no more letters in the word, our
+       new word is the answer.
 ---
 
 # Pseudo code
@@ -267,7 +386,7 @@ return A
 
 # Code (Ruby)
 
-```
+```ruby
 word = "Zebra"
 
 new_word = ""
@@ -296,11 +415,31 @@ new_word # => "arbeZ"
 
 ---
 
-> For each two adjacent elements:
+> For each two adjacent elements
+
+<br>
 
 > Exchange them if out of order
 
+<br>
+
 > Repeat until array is sorted.
+
+---
+
+# Break it down
+
+    1. Assume the array is sorted
+
+    2. Go through each pair of elements
+       - If the first is larger than the second
+         - Swap the two elements
+         - Remember that the array isn't sorted
+
+    3. When done with all the elements, if we
+       still believe the array is sorted, STOP
+
+    4. Otherwise go back to step 1
 
 ---
 
@@ -372,6 +511,8 @@ end
 
 # What are we measuring?
 
+^ TODO: Maybe mention Turing Machine here?
+
 ^ When we speak of algorithm complexity, what are we measuring?
   Operations: comparisons, increments.
 
@@ -395,10 +536,162 @@ end
 
 ---
 
+> `O(1)`
 > `O(n)`
-> `O(n^2)`
 > `O(log n)`
 > `O(n log n)`
+> `O(n^2)`
+> `O(2^n)`
+
+- These grow at a different rate based on how `n` changes
+
+---
+
+> `O(1)`
+
+    Takes a constant amount of time regardless of input size
+
+    Example: looking up an index in an array
+             looking up a key in a hash/dictionary (most cases)
+
+---
+
+> `O(n)`
+
+    If n doubles, the algorithm takes twice as long
+
+    Example: linear search animation
+
+---
+
+> `O(n^2)`
+
+    If n doubles, the algorithm takes FOUR times as long
+
+    Example: bubble sort!
+
+---
+
+> `O(2^n)`
+
+    If n doubles, the algorithm takes many times as long
+
+    e.g. if n grows from 20 to 40, O(2^n) grows by over a MILLION times
+
+---
+
+# Tower of Hanoi
+
+    The Tower of Hanoi is a mathematical game or puzzle.
+
+    It consists of three rods and a number of disks
+    of different sizes, which can slide onto any rod.
+
+    The puzzle starts with the disks in a neat stack
+    in ascending order of size on one rod, the smallest
+    at the top, thus making a conical shape.
+
+---
+
+# Tower of Hanoi
+
+    The objective of the puzzle is to move the entire
+
+    stack to another rod, obeying simple rules
+
+---
+
+# Tower of Hanoi
+
+    1. Only one disk can be moved at a time.
+
+    2. Each move consists of taking the upper disk
+       from one of the stacks and placing it on top
+       of another stack i.e. a disk can only be
+       moved if it is the uppermost disk on a stack.
+
+    3. No disk may be placed on top of a smaller disk.
+
+---
+
+# [fit] Tower of Hanoi
+
+# $$ 2^n $$
+
+---
+
+# [fit] Tower of Hanoi
+
+![right fit](http://see-math.math.tamu.edu/2010/CounselorMovies/philip-y.gif)
+
+---
+
+# [fit] To understand recursion you
+# [fit] must first understand recursion
+
+---
+
+# Tower of Hanoi
+
+<br>
+
+## If we could move a disk per second
+## how long would this take?
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_1_     | **less than a minute** | |
+_8_     | **4 minutes** | |
+_12_    | **about 1 hour** | |
+_17_    | **1 day** | |
+
+^ Up to about a day
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_21_    | **24 days** | |
+
+^ Up to about a month
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_25_    | **about 1 year** | |
+
+^ Up to about a year
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_31_    | **about 68 years** | |
+
+^ Up to about an (average) lifetime
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_35_    | ... **over 1,089 years** | |
+
+^ Up to about a millennium
+
+---
+
+Disks   | Time | |
+------- | ----- | --- |
+_50_    | **35.7 million years** :scream: | |
+
+^ ZOMG
+
+---
+
+# [fit] Complexity
 
 ---
 
@@ -416,8 +709,7 @@ end
 
 ![fit](assets/Sicily-cities-map-bjs.jpg)
 
-^ What is the best route for the salesperson to visit each city only once, returning
-  to the starting city at the end?
+^ What is the best route for the salesperson to visit each city only once, returning to the starting city at the end?
 
 ---
 
@@ -429,23 +721,60 @@ end
 
 ---
 
+# 1 Billion Computations per second
+
+Cities | Time
+------ | ----
+2      | less than a minute
+3      | less than a minute
+4      | less than a minute
+14     | 1 minute
+16     | about 6 hours
+
+---
+
+# 1 Billion Computations per second
+
+Cities | Time
+------ | -----------------
+18     | 2 months
+19     | almost 4 years
+21     | about 1,620 years
+
+---
+
 ![fit](assets/tsp_iteration.gif)
 
 ^ Upwards of 400,000 iterations for about 50 cities
 
 ---
 
-> The TSP has several applications
-- planning
-- logistics
-- manufacturing of microchips
-- DNA sequencing.
+# The TSP has several applications
+
+    planning
+
+
+    logistics
+
+
+    manufacturing of microchips
+
+
+    DNA sequencing
 
 ---
 
 # [fit] For More info
 
 # [fit] http://bit.ly/XUXLXWX
+
+---
+
+# [fit] Wrap It Up
+
+![fit autoplay mute loop](assets/wrap-it-up.gif)
+
+^ Lets wrap this up
 
 ---
 
@@ -457,7 +786,7 @@ end
 
 ---
 
-## Understanding How to Break Problems Down Effectively REALLY Matters
+## Understanding How to Break Problems Down Effectively **REALLY Matters**
 
 ---
 
@@ -468,6 +797,19 @@ end
     3. Break it into even smaller steps
     4. Translate this to code
     5. Appreciate the complexity
+
+---
+
+# How to practice?
+
+    exercism.io
+
+
+    codewars.com
+
+
+    CoderNight meetup
+    (http://meetup.com/CoderNight)
 
 ---
 
