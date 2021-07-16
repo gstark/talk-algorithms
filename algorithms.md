@@ -1,3 +1,5 @@
+theme: Huerta, 5
+
 # [fit] Algorithms, not Al Gore's Rhythm
 
 ![inline autoplay mute loop](assets/algore.gif)
@@ -8,17 +10,15 @@
 
 ---
 
-![fit](assets/TIIY-Logo-500px-white.png)
+![fit](https://suncoast.io/brand/banner.png)
 
-^ Instructor at The Iron Yard
+^ Instructor at The Academy at Suncoast Developers Guild
 
 ---
 
 ![fit](assets/riley.png)
 
 ^ I have promised my girlfriend that I would include a photo of our dog Riley in each presentation I do.
-
-^ I am the Backend Instructor here at The Iron Yard.
 
 ---
 
@@ -161,7 +161,6 @@ return A
 
 ---
 
-
 # Euclid's Algorithm for GCD
 
 `A = 210, B = 45`
@@ -286,6 +285,8 @@ return A
 
 # [fit] "Make a PB&J Sandwich"
 
+Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practicing this.
+
 ^ Give a couple of example tries
 
 ^ Show that nearly every step we think is precise, could be more precise
@@ -305,7 +306,7 @@ return A
 ---
 
     1. Read the problem completely twice.
-    2. Solve the problem manually with 3 sets of sample data.
+    2. Solve the problem manually with several sets of sample data.
     3. Optimize the manual steps.
     4. Write the manual steps as comments or pseudo-code.
     5. Replace the comments or pseudo-code with real code.
@@ -350,12 +351,21 @@ return A
 
 ---
 
+# PEDAC
+
+- Created by [`Launch School`](https://launchschool.com/)
+- Generalized process for creating algorithms:
+  - **P**　 roblem
+  - **E**　 xamples
+  - **D**　 ata (structures)
+  - **A**　 lgorithm
+  - **C**　 ode
+
+---
+
 # Example
 
--
--
--
--
+<br/>
 
 ## [fit] Reverse a string (word)
 
@@ -363,6 +373,36 @@ return A
 ^ How would we break this down into tiny steps
 
 ---
+
+# `P`roblem
+
+Given a word, which is just a sequence of letters, make a new word which is the same sequence of letters in reverse order.
+
+---
+
+# `E`xamples
+
+|                             |         |
+| --------------------------- | ------- |
+| zebra                       | arbez   |
+| word                        | dwow    |
+| rotator                     | rotator |
+| a man a plan a canal panama |         |
+
+^ `File.read("/usr/share/dict/words").split("\n").filter { |word| word.reverse == word }.sort_by(&:length)`
+
+---
+
+# `D`ata (structures)
+
+- `string`
+- loops
+
+---
+
+# `A` lgorithm ...
+
+Start by using a specific example...
 
     1. Write “Zebra” down.
     2. Create a new empty word.
@@ -373,6 +413,7 @@ return A
        letter and start back at 3.
     5. When there are no more letters in the word, our
        new word is the answer.
+
 ---
 
 # Pseudo code
@@ -432,7 +473,7 @@ new_word # => "arbeZ"
     1. Assume the array is sorted
 
     2. Go through each pair of elements
-       - If the first is larger than the second
+       - If the first of the pair is larger than the second of the pair
          - Swap the two elements
          - Remember that the array isn't sorted
 
@@ -452,19 +493,33 @@ array = [7,1,2,9,4,5]
 
 def bubble_sort(array)
   loop do
+    # Assume the list is sorted
     sorted = true
+
+    # Go through the indexes of the array in pairs
     (0...array.length).each_cons(2) do |first, second|
+
+      # if the first is larger
       if array[first] > array[second]
+        # Swap
         array[first], array[second] = array[second], array[first]
+
+        # Remember array isn't sorted
         sorted = false
       end
+
     end
+
+    # If array is sorted, stop
     break if sorted
+
+    # end of loop/do goes back to first step
   end
 end
 ```
 
 ---
+
 ![inline autoplay mute loop](assets/bubblesort.mp4)
 
 - https://github.com/AIRTucha/SortVis
@@ -487,34 +542,38 @@ end
 
 ---
 
-# Measure
-- the number of operations required => _time_
-- the amount of memory required     => _space_
+# [fit] Measuring Time and Space
+
+![fit right](https://upload.wikimedia.org/wikipedia/commons/8/8f/TARDIS1.jpg)
 
 ---
 
-> Best case
--
--
-> Worst case
--
--
-> Average case
--
--
+# Measure
 
-^ Best case - if the data is perfect for *this* algorithm, how fast
-  Worst case - if the data is terrible for *this* algorithm, how slow
-  Over all possible inputs, what is the average speed of the algorithm
+|           |                                   |
+| --------- | --------------------------------- |
+| **time**  | the number of operations required |
+| **space** | the amount of memory required     |
+
+---
+
+|              |                                                                      |
+| ------------ | -------------------------------------------------------------------- |
+| Best case    | If the data is perfect for _this_ algorithm, how fast are we?        |
+| Worst case   | If the data is terrible for _this_ algorithm, how slow are we?       |
+| Average case | Over all possible inputs, what is the average speed of the algorithm |
 
 ---
 
 # What are we measuring?
 
-^ TODO: Maybe mention Turing Machine here?
+When we speak of algorithm complexity, what are we measuring?
 
-^ When we speak of algorithm complexity, what are we measuring?
-  Operations: comparisons, increments.
+- Operations
+- Comparisons
+- Increments
+
+^ TODO: Maybe mention Turing Machine here?
 
 ---
 
@@ -525,10 +584,10 @@ end
 ![fit](assets/binary-and-linear-search-animations.gif)
 
 ^ Binary search we half the amount of comparisons we need to do
-  each time we make a decision. This is worst case log(n)
+each time we make a decision. This is worst case log(n)
 
 ^ The linear search has to compare every element until it finds it.
-  Worst case is O(n)
+Worst case is O(n)
 
 ---
 
@@ -537,10 +596,15 @@ end
 ---
 
 > `O(1)`
-> `O(n)`
+
 > `O(log n)`
+
+> `O(n)`
+
 > `O(n log n)`
+
 > `O(n^2)`
+
 > `O(2^n)`
 
 - These grow at a different rate based on how `n` changes
@@ -577,6 +641,8 @@ end
     If n doubles, the algorithm takes many times as long
 
     e.g. if n grows from 20 to 40, O(2^n) grows by over a MILLION times
+
+    Example: Tower of Hanoi
 
 ---
 
@@ -620,14 +686,29 @@ end
 
 ---
 
-# [fit] Tower of Hanoi
+# [fit] To understand recursion you
 
-![right fit](http://see-math.math.tamu.edu/2010/CounselorMovies/philip-y.gif)
+# [fit] must first understand recursion
 
 ---
 
-# [fit] To understand recursion you
-# [fit] must first understand recursion
+# [fit] Tower of Hanoi Recursively
+
+    Move all but the bottom disk to the
+    "spare" peg (using this exact algorithm)
+
+    Move the bottom disk to the "destination"
+    peg (this is a simple move)
+
+    Move all the disks from the "spare" peg to
+    the "destination" peg (using this exact
+    algorithm)
+
+---
+
+# [fit] Tower of Hanoi
+
+![inline](http://see-math.math.tamu.edu/2010/CounselorMovies/philip-y.gif)
 
 ---
 
@@ -635,59 +716,52 @@ end
 
 <br>
 
-## If we could move a disk per second
-## how long would this take?
+# If we could move a **disk per second** how long would this take?
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_1_     | **less than a minute** | |
-_8_     | **4 minutes** | |
-_12_    | **about 1 hour** | |
-_17_    | **1 day** | |
-
-^ Up to about a day
+| Disks | Time                 |
+| ----- | -------------------- |
+| _1_   | **a second**         |
+| _8_   | **4 minutes**        |
+| _12_  | **about 1 hour**     |
+| _17_  | **1 day and a half** |
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_21_    | **24 days** | |
-
-^ Up to about a month
+| Disks | Time        |               |
+| ----- | ----------- | ------------- |
+| _21_  | **24 days** | About a month |
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_25_    | **about 1 year** | |
-
-^ Up to about a year
+| Disks | Time         |              |
+| ----- | ------------ | ------------ |
+| _25_  | **388 days** | About a year |
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_31_    | **about 68 years** | |
-
-^ Up to about an (average) lifetime
+| Disks | Time               |                             |
+| ----- | ------------------ | --------------------------- |
+| _31_  | **about 68 years** | About an (average) lifetime |
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_35_    | ... **over 1,089 years** | |
-
-^ Up to about a millennium
+| Disks | Time                     |                    |
+| ----- | ------------------------ | ------------------ |
+| _35_  | ... **over 1,089 years** | About a millennium |
 
 ---
 
-Disks   | Time | |
-------- | ----- | --- |
-_50_    | **35.7 million years** :scream: | |
+| Disks | Time                   |          |
+| ----- | ---------------------- | -------- |
+| _50_  | **35.7 million years** | :scream: |
 
-^ ZOMG
+---
+
+| Disks | Time                           |                               |
+| ----- | ------------------------------ | ----------------------------- |
+| _59_  | **More than 13 billion years** | Estimated age of the universe |
 
 ---
 
@@ -723,23 +797,23 @@ _50_    | **35.7 million years** :scream: | |
 
 # 1 Billion Computations per second
 
-Cities | Time
------- | ----
-2      | less than a minute
-3      | less than a minute
-4      | less than a minute
-14     | 1 minute
-16     | about 6 hours
+| Cities | Time               |
+| ------ | ------------------ |
+| 2      | less than a minute |
+| 3      | less than a minute |
+| 4      | less than a minute |
+| 14     | 1 minute           |
+| 16     | about 6 hours      |
 
 ---
 
 # 1 Billion Computations per second
 
-Cities | Time
------- | -----------------
-18     | 2 months
-19     | almost 4 years
-21     | about 1,620 years
+| Cities | Time              |
+| ------ | ----------------- |
+| 18     | 2 months          |
+| 19     | almost 4 years    |
+| 21     | about 1,620 years |
 
 ---
 
