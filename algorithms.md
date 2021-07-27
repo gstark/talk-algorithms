@@ -56,25 +56,34 @@ theme: Huerta, 5
 
 # Algorithms
 
-^ Like any good presentation lets give the boring definition
+Like any good presentation, let us give the boring definition.
 
 ---
 
-> Self-contained step-by-step set of operations to be performed.
+# Definition (1/3)
 
-^ And another definition...
-
----
-
-> Algorithms perform calculation, data processing, and/or automated reasoning tasks.
-
-^ And another definition...
+    Self-contained step-by-step
+    set of operations to be
+    performed.
 
 ---
 
-> An algorithm is an effective method that can be expressed within a finite amount of space and time and in a well-defined formal language for calculating a function.
+# Definition (2/3)
 
-^ And another definition...
+    Algorithms perform calculations,
+    data processing, and/or
+    automated reasoning tasks.
+
+---
+
+# Definition (3/3)
+
+    An algorithm is an effective
+    method that can be expressed
+    within a finite amount of
+    space and time and in a
+    well-defined formal language
+    for calculating a function.
 
 ---
 
@@ -104,7 +113,7 @@ theme: Huerta, 5
 
 ![inline fill](assets/recipe.jpg)
 
-^ Followed, created, or modified a recipe for cooking
+^ Followed, created or modified a recipe for cooking
 
 ---
 
@@ -138,7 +147,15 @@ theme: Huerta, 5
 
 ---
 
-# Euclid's Algorithm for GCD
+# [fit] Euclid's Algorithm for Computing the Greatest Common Divisor (GCD)
+
+[.column]
+
+    English: Given two numbers, A and B,
+    what is the largest number that
+    evenly divides **both** numbers
+
+[.column]
 
 ```ruby
 while (A != B) {
@@ -157,125 +174,527 @@ return A
 
 # Euclid's Algorithm for GCD
 
+[.column]
+
 `A = 210, B = 45`
+
+[.column]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
 
+[.column]
+
 `A = 210, B = 45`
-<br>
-`A > B (210 > 45)`
-<br>
-`A = 210 - 45`
-<br>
-`A = 165`
+
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 210, B = 45` <br/> `A > B (210 > 45)`
+
+[.column]
+
+[.code-highlight: 3]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
+
+[.code-highlight: 4]
+
+`A = 210, B = 45` <br/> `A > B (210 > 45)` <br/> `A = 210 - 45` <br/> `A = 165`
+
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 165, B = 45`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 165, B = 45`
-<br>
-`A > B (165 > 45)`
-<br>
-`A = 165 - 45`
-<br>
-`A = 120`
+[.column]
+
+`A = 165, B = 45` <br/> `A > B (165 > 45)`
+
+[.column]
+
+[.code-highlight: 3]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 165, B = 45` <br/> `A > B (165 > 45)` <br/> `A = 165 - 45` <br/> `A = 120`
+
+[.column]
+
+[.code-highlight: 4]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 120, B = 45`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 120, B = 45`
-<br>
-`A > B (120 > 45)`
-<br>
-`A = 120 - 45`
-<br>
-`A = 75`
+[.column]
+
+`A = 120, B = 45` <br/> `A > B (120 > 45)`
+
+[.column]
+
+[.code-highlight: 3]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 120, B = 45` <br/> `A > B (120 > 45)` <br/> `A = 120 - 45` <br/> `A = 75`
+
+[.column]
+
+[.code-highlight: 4]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 75, B = 45`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 75, B = 45`
-<br>
-`A > B (75 > 45)`
-<br>
-`A = 75 - 45`
-<br>
-`A = 30`
+[.column]
+
+`A = 75, B = 45` <br/> `A > B (75 > 45)`
+
+[.column]
+
+[.code-highlight: 3]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 75, B = 45` <br/> `A > B (75 > 45)` <br/> `A = 75 - 45` <br/> `A = 30`
+
+[.column]
+
+[.code-highlight: 4]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 30, B = 45`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 30, B = 45`
-<br>
-`else ... since it isn't true that (30 > 45)`
-<br>
-`B = 45 - 30`
-<br>
-`B = 15`
+[.column]
+
+`A = 30, B = 45` <br/> `else ... since it isn't true that (30 > 45)` <br/>
+`B = 45 - 30` <br/> `B = 15`
+
+[.column]
+
+[.code-highlight: 3, 5]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 30, B = 45` <br/> `else ... since it isn't true that (30 > 45)` <br/> `B = 45 - 30` <br/> `B = 15`
+
+[.column]
+
+[.code-highlight: 6]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 30, B = 15`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 30, B = 15`
-<br>
-`A > B (30 > 15)`
-<br>
-`A = 30 - 15`
-<br>
-`A = 15`
+[.column]
+
+`A = 30, B = 15` <br/> `A > B (30 > 15)`
+
+[.column]
+
+[.code-highlight: 3]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
 # Euclid's Algorithm for GCD
+
+[.column]
+
+`A = 30, B = 15` <br/> `A > B (30 > 15)` <br/> `A = 30 - 15` <br/> `A = 15`
+
+[.column]
+
+[.code-highlight: 4]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
+---
+
+# Euclid's Algorithm for GCD
+
+[.column]
 
 `A = 15, B = 15`
 
+[.column]
+
+[.code-highlight: 1]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
+
 ---
 
 # Euclid's Algorithm for GCD
 
-`A = 15, B = 15`
-<br>
-`done with *while* since A == B`
-<br>
-`GCD = 15`
+[.column]
+
+`A = 15, B = 15` <br/>`done with *while*` <br/>`since A == B`<br/>`GCD = 15`
+
+[.column]
+
+[.code-highlight: 10]
+
+```ruby
+while (A != B) {
+
+ if (A > B)
+   A = A - B
+ else
+   B = B - A
+
+}
+
+return A
+```
 
 ---
 
@@ -283,13 +702,14 @@ return A
 
 ---
 
-# [fit] "Make a PB&J Sandwich"
+# [fit] "Make a PB&J Sandwich."
 
-Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practicing this.
+Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family
+practicing this.
 
 ^ Give a couple of example tries
 
-^ Show that nearly every step we think is precise, could be more precise
+^ Show that nearly every step we think is precise could be more precise
 
 ^ Suggest people try at home
 
@@ -301,7 +721,7 @@ Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practic
 
 ![fit](assets/break-it-down.jpg)
 
-^ When starting out with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
+^ When starting with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
 
 ---
 
@@ -335,7 +755,7 @@ Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practic
 
 # Optimize the manual solution
 
-    - Can you remove steps?
+    - Can you remove any steps?
 
 ---
 
@@ -347,7 +767,7 @@ Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practic
 
 # Replace comments with real code
 
-    - Replace each individual steps with code
+    - Replace each individual step with code
 
 ---
 
@@ -376,20 +796,20 @@ Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family practic
 
 # `P`roblem
 
-Given a word, which is just a sequence of letters, make a new word which is the same sequence of letters in reverse order.
+Given a word, which is just a sequence of letters, make a new word with the same sequence of letters in reverse order.
 
 ---
 
 # `E`xamples
 
-|                             |         |
-| --------------------------- | ------- |
-| zebra                       | arbez   |
-| word                        | dwow    |
-| rotator                     | rotator |
-| a man a plan a canal panama |         |
+|         |         |
+| ------- | ------- |
+| zebra   | arbez   |
+| word    | dwow    |
+| rotator | rotator |
 
-^ `File.read("/usr/share/dict/words").split("\n").filter { |word| word.reverse == word }.sort_by(&:length)`
+^
+`File.read("/usr/share/dict/words").split("\n").filter { |word| word.reverse == word }.sort_by(&:length)`
 
 ---
 
@@ -452,19 +872,20 @@ new_word # => "arbeZ"
 
 ![fill](assets/bubbles.jpg)
 
-^ https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5B-8mahpK-hN6juM-r7AJpA-ajYWaD-6zd2fV-nhgRbE-86k6Pf-38z42x-indd8g-o92k4j-btkhTp-8as94X-gdM5mg-nuoPxX-8ibJQ1-h2paWu-rqZ7-2wtUmq-7LYqqC-7yGiBn-2VD8P9-bWUbbw-6dXEed-ayCXtz-9VZvt5-ah6cUm-7aNK5e-dM9tRD-bytmvQ-fdgM3t-fMGVce-oDBmtB-fpCiAy-9GxMTc-iALYdC-9gcyYE-e5xtKs-xYMme-5TBqfJ-etJxvL-9TRW6k-4ZPTPC-9JtZ4F-96g9Ms-anRjkS-cqPJ9b-aqFvbJ-85xV3n
+^
+https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5B-8mahpK-hN6juM-r7AJpA-ajYWaD-6zd2fV-nhgRbE-86k6Pf-38z42x-indd8g-o92k4j-btkhTp-8as94X-gdM5mg-nuoPxX-8ibJQ1-h2paWu-rqZ7-2wtUmq-7LYqqC-7yGiBn-2VD8P9-bWUbbw-6dXEed-ayCXtz-9VZvt5-ah6cUm-7aNK5e-dM9tRD-bytmvQ-fdgM3t-fMGVce-oDBmtB-fpCiAy-9GxMTc-iALYdC-9gcyYE-e5xtKs-xYMme-5TBqfJ-etJxvL-9TRW6k-4ZPTPC-9JtZ4F-96g9Ms-anRjkS-cqPJ9b-aqFvbJ-85xV3n
 
 ---
 
 > For each two adjacent elements
 
-<br>
+<br/>
 
 > Exchange them if out of order
 
-<br>
+<br/>
 
-> Repeat until array is sorted.
+> Repeat until the array is sorted.
 
 ---
 
@@ -480,7 +901,64 @@ new_word # => "arbeZ"
     3. When done with all the elements, if we
        still believe the array is sorted, STOP
 
-    4. Otherwise go back to step 1
+    4. Otherwise, go back to step 1
+
+---
+
+# Write out a psuedo-code algorithm
+
+- Paste that in your code editor
+
+```
+# Assume the list is sorted
+# Go through the indexes of the array in pairs
+#   If the first is larger, swap, remember array isn't sorted
+# If array is sorted, stop
+# go back to the first step
+```
+
+---
+
+# Fill in the code around it
+
+If you can't _directly_ translate a statement to code then either:
+
+- You need to break the statement into smaller pieces and try again
+- or ... you **DO** have a small enough statement, but don't know the language syntax well enough
+
+---
+
+[.code-highlight: 5,7,8,11, 13, 16, 22, 25]
+
+```ruby
+array = [7,1,2,9,4,5]
+
+def bubble_sort(array)
+  loop do
+    # Assume the list is sorted
+    sorted = true
+
+    # Go through the indexes of the array in pairs
+    (0...array.length).each_cons(2) do |first, second|
+
+      # if the first is larger
+      if array[first] > array[second]
+        # Swap
+        array[first], array[second] = array[second], array[first]
+
+        # Remember array isn't sorted
+        sorted = false
+      end
+
+    end
+
+    # If array is sorted, stop
+    break if sorted
+
+    # end of loop/do go back to the first step
+  end
+end
+```
 
 ---
 
@@ -513,7 +991,7 @@ def bubble_sort(array)
     # If array is sorted, stop
     break if sorted
 
-    # end of loop/do goes back to first step
+    # end of loop/do go back to the first step
   end
 end
 ```
@@ -530,7 +1008,8 @@ end
 
 ![fit](assets/zen-garden.jpg)
 
-^ https://www.flickr.com/photos/91604813@N03/8439070389/in/photolist-dRJrBB-s4K1VU-p6DwNY-dRQ271-csLT6L-s5HH9C-53sRLW-p6GeRy-edcCWC-nWCE27-nv6aQE-anoGck-anoFKK-7ius6w-sntwEE-nHEyJ7-anrLr1-ay5Dmf-eijpgL-eimZwd-eidF5v-ekmQMh-anrBX9-dRJrCg-anxCHQ-53oCGD-ay2W6B-54vk5W-anuNNk-anoDX8-anrKnG-dH8fwH-qanAxd-ay5DCW-8VRU3W-poMWLN-ekmnqN-fy8aDK-G78Jjz-anrJWw-anrKLb-anoYUR-5oUwi3-eidEGz-eijpkb-g4cW9M-ein3Yy-eidEQV-b6uVeB-a6v8Lx
+^
+https://www.flickr.com/photos/91604813@N03/8439070389/in/photolist-dRJrBB-s4K1VU-p6DwNY-dRQ271-csLT6L-s5HH9C-53sRLW-p6GeRy-edcCWC-nWCE27-nv6aQE-anoGck-anoFKK-7ius6w-sntwEE-nHEyJ7-anrLr1-ay5Dmf-eijpgL-eimZwd-eidF5v-ekmQMh-anrBX9-dRJrCg-anxCHQ-53oCGD-ay2W6B-54vk5W-anuNNk-anoDX8-anrKnG-dH8fwH-qanAxd-ay5DCW-8VRU3W-poMWLN-ekmnqN-fy8aDK-G78Jjz-anrJWw-anrKLb-anoYUR-5oUwi3-eidEGz-eijpkb-g4cW9M-ein3Yy-eidEQV-b6uVeB-a6v8Lx
 
 ^ Moment of zen
 
@@ -557,11 +1036,11 @@ end
 
 ---
 
-|              |                                                                      |
-| ------------ | -------------------------------------------------------------------- |
-| Best case    | If the data is perfect for _this_ algorithm, how fast are we?        |
-| Worst case   | If the data is terrible for _this_ algorithm, how slow are we?       |
-| Average case | Over all possible inputs, what is the average speed of the algorithm |
+|              |                                                                             |
+| ------------ | --------------------------------------------------------------------------- |
+| Best case    | If the data is perfect for _this_ algorithm, how fast are we?               |
+| Worst case   | If the data is terrible for _this_ algorithm, how slow are we?              |
+| Average case | Considering all possible inputs, what is the average speed of the algorithm |
 
 ---
 
@@ -583,11 +1062,11 @@ When we speak of algorithm complexity, what are we measuring?
 
 ![fit](assets/binary-and-linear-search-animations.gif)
 
-^ Binary search we half the amount of comparisons we need to do
-each time we make a decision. This is worst case log(n)
+^ Binary search we half the amount of comparisons we need to do each time we
+make a decision. This is worst case log(n)
 
-^ The linear search has to compare every element until it finds it.
-Worst case is O(n)
+^ The linear search has to compare every element until it finds it. Worst case
+is O(n)
 
 ---
 
@@ -640,7 +1119,7 @@ Worst case is O(n)
 
     If n doubles, the algorithm takes many times as long
 
-    e.g. if n grows from 20 to 40, O(2^n) grows by over a MILLION times
+    e.g., if n grows from 20 to 40, O(2^n) grows by over a MILLION times
 
     Example: Tower of Hanoi
 
@@ -650,7 +1129,7 @@ Worst case is O(n)
 
     The Tower of Hanoi is a mathematical game or puzzle.
 
-    It consists of three rods and a number of disks
+    It consists of three rods and several disks
     of different sizes, which can slide onto any rod.
 
     The puzzle starts with the disks in a neat stack
@@ -708,13 +1187,13 @@ Worst case is O(n)
 
 # [fit] Tower of Hanoi
 
-![inline](http://see-math.math.tamu.edu/2010/CounselorMovies/philip-y.gif)
+![inline](https://upload.wikimedia.org/wikipedia/commons/8/8d/Iterative_algorithm_solving_a_6_disks_Tower_of_Hanoi.gif)
 
 ---
 
 # Tower of Hanoi
 
-<br>
+<br/>
 
 # If we could move a **disk per second** how long would this take?
 
@@ -783,7 +1262,8 @@ Worst case is O(n)
 
 ![fit](assets/Sicily-cities-map-bjs.jpg)
 
-^ What is the best route for the salesperson to visit each city only once, returning to the starting city at the end?
+^ What is the best route for the salesperson to visit each city only once,
+returning to the starting city at the end?
 
 ---
 
@@ -792,6 +1272,14 @@ Worst case is O(n)
 ---
 
 # [fit] Probably, for a small number of cities!
+
+---
+
+# Complexity
+
+![inline fit](https://imgs.xkcd.com/comics/travelling_salesman_problem.png)
+
+> [https://www.explainxkcd.com/wiki/index.php/399:\_Travelling_Salesman_Problem](https://www.explainxkcd.com/wiki/index.php/399:_Travelling_Salesman_Problem])
 
 ---
 
